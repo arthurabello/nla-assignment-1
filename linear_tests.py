@@ -56,7 +56,7 @@ def plot_subplots(tests, nrows, ncols, overall_title):
         ax.set_title(label)
         ax.set_xlabel('Iteration')
         ax.set_ylabel('Error (norm)')
-        ax.set_yscale('log')
+        ax.set_yscale('log')   #log scale for better visualization
         ax.legend()
         ax.grid(True)
     
@@ -126,7 +126,7 @@ A_3_2 = np.array([
 ])
 b_3_2 = np.array([5.0, 6.0, 7.0])
 x0_3_2 = np.zeros_like(b_3_2)
-label_3_2 = "3x3 Teste 2: Non-Dominant Matrix"
+label_3_2 = "3x3 Test 2: Non-Dominant Matrix"
 _, errors_j, errors_g = run_test(A_3_2, b_3_2, x0_3_2, tolerance, max_iter, label_3_2)
 tests_3x3.append((label_3_2, errors_j, errors_g))
 
