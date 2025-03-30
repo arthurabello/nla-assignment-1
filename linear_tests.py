@@ -89,7 +89,7 @@ A_2_2 = np.array([[1.0, 2.0], #non diagonally dominant matrix (it can diverge or
                   [2.0, 1.0]])
 b_2_2 = np.array([3.0, 3.0])
 x0_2_2 = np.zeros_like(b_2_2)
-label_2_2 = "2x2 Teste 2: Non-Dominant Matrix"
+label_2_2 = "2x2 Test 2: Non-Dominant Matrix"
 _, errors_j, errors_g = run_test(A_2_2, b_2_2, x0_2_2, tolerance, max_iter, label_2_2)
 tests_2x2.append((label_2_2, errors_j, errors_g))
 
@@ -115,7 +115,7 @@ A_3_1 = np.array([[5.0, 1.0, 1.0],
                   [1.0, 1.0, 7.0]])
 b_3_1 = np.array([7.0, 8.0, 9.0])
 x0_3_1 = np.zeros_like(b_3_1)
-label_3_1 = "3x3 Tesst 1: Dominant Matrix"
+label_3_1 = "3x3 Test 1: Dominant Matrix"
 _, errors_j, errors_g = run_test(A_3_1, b_3_1, x0_3_1, tolerance, max_iter, label_3_1)
 tests_3x3.append((label_3_1, errors_j, errors_g))
 
@@ -135,7 +135,7 @@ A_3_3 = np.array([[1.0, 0.0, 1.0],
                   [1.0, 2.0, -3.0]])    #hopefully jacobi will converge and Gauss-Seidel will have constant error
 b_3_3 = np.array([1.0, 2.0, 3.0])
 x0_3_3 = np.zeros_like(b_3_3)
-label_3_3 = "3x3 Teste 3: Special Event"
+label_3_3 = "3x3 Test 3: Special Event"
 _, errors_j, errors_g = run_test(A_3_3, b_3_3, x0_3_3, tolerance, max_iter, label_3_3)
 tests_3x3.append((label_3_3, errors_j, errors_g))
 
