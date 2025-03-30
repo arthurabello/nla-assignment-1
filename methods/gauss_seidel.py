@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def gauss_seidel_method(A, b, x0, tolerance=1e-6, maximum_number_of_iterations=100, x_exact=None):
 
