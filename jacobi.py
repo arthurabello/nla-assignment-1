@@ -38,7 +38,7 @@ def jacobi_method(A, b, x0, tolerance=1e-6, maximum_number_of_iterations=100, x_
         errors.append(current_error)
 
         if current_error< tolerance:
-            break
+            break #its close enough
 
         x = x_new.copy()
 
