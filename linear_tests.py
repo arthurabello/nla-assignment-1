@@ -80,7 +80,7 @@ tests_2x2 = []
 A_2_1 = np.array([[4.0, 1.0], #diagonally dominant matrix (it should converge faster hopefully)
                   [2.0, 3.0]])
 b_2_1 = np.array([1.0, 2.0])
-x0_2_1 = np.zeros_like(b_2_1)
+x0_2_1 = np.zeros_like(b_2_1    )
 label_2_1 = "2x2 Test 1: Dominant Matrix"
 _, errors_j, errors_g = run_test(A_2_1, b_2_1, x0_2_1, tolerance, max_iter, label_2_1)
 tests_2x2.append((label_2_1, errors_j, errors_g))

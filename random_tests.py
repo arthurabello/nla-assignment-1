@@ -47,7 +47,7 @@ fig, axes = plt.subplots(nrows=5, ncols=2, figsize=(12, 18))
 axes = axes.flatten()  #more easily indexed
 
 for i in range(n_experimentos):
-    perturb = np.random.uniform(-0.2, 0.2, size=A_orig.shape)
+    perturb = np.random.uniform(-10, 10, size=A_orig.shape)
     A_pert = A_orig + perturb
 
     err_j, err_g = run_methods(A_pert, b, x0)
@@ -74,7 +74,7 @@ axes = axes.flatten()
 
 for i in range(n_experimentos):
     perturb = np.zeros_like(A_orig)
-    diag_pert = np.random.uniform(-0.2, 0.2, size=A_orig.shape[0])
+    diag_pert = np.random.uniform(-10, 10, size=A_orig.shape[0])
     np.fill_diagonal(perturb, diag_pert)  #only diagonal experiments
     A_pert = A_orig + perturb
 
@@ -104,7 +104,7 @@ for i in range(n_experimentos):
     perturb = np.zeros_like(A_orig)
     mask = np.ones_like(A_orig, dtype=bool) #masks non-diagonal elemtns
     np.fill_diagonal(mask, False)
-    perturb[mask] = np.random.uniform(-0.2, 0.2, size=A_orig[mask].shape)
+    perturb[mask] = np.random.uniform(-10, 10, size=A_orig[mask].shape)
     A_pert = A_orig + perturb
 
     err_j, err_g = run_methods(A_pert, b, x0)
